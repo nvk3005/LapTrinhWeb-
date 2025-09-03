@@ -1,7 +1,0 @@
-package vn.iotstar.model;
-
-public class CategoryModel {
-	private int cateid;
-	private String catename;
-	private String icon;
-}
