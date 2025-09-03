@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\K23_DaiHoc\HocKy1_Nam3\Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2929891282.index
+\HelloServlet\src\main\java
+D:\K23_DaiHoc\HocKy1_Nam3\Workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\352904565.index
+\HelloServlet\src\main\java

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.net.http.HttpClient"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.awt.Robot"/>
+    <fullyQualifiedTypeName name="vn.iotstar.dao.UserDao"/>
+    <fullyQualifiedTypeName name="vn.iotstar.dao.impl.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="vn.iotstar.services.impl.UserServicesImpl"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="vn.iotstar.connection.DBConnect"/>
+    <fullyQualifiedTypeName name="vn.iotstar.services.UserServices"/>
+    <fullyQualifiedTypeName name="vn.iotstar.dao.CategoryDao"/>
+    <fullyQualifiedTypeName name="vn.iotstar.dao.impl.CategoryDaoImpl"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="vn.iotstar.services.CategoryService"/>
+    <fullyQualifiedTypeName name="vn.iotstar.services.impl.CategoryServiceImpl"/>
+    <fullyQualifiedTypeName name="org.apache.commons.fileupload.RequestContext"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,69 @@
+package vn.iotstar.services.impl;
+
+import java.io.File;
+import java.util.List;
+
+import vn.iotstar.dao.CategoryDao;
+import vn.iotstar.dao.impl.CategoryDaoImpl;
+import vn.iotstar.model.CategoryModel;
+import vn.iotstar.services.CategoryService;
+
+public class CategoryServiceImpl implements CategoryService {
+	CategoryDao categoryDao = new CategoryDaoImpl();
+
+	@Override
+	public void insert(CategoryModel category) {
+		// TODO Auto-generated method stub
+		categoryDao.insert(category);
+
+	}
+
+	@Override
+	public void edit(CategoryModel newCategory) {
+		// TODO Auto-generated method stub
+		CategoryModel oldCategory = categoryDao.get(newCategory.getCateid());
+		oldCategory.setCatename(newCategory.getCatename());
+		if (newCategory.getIcon() != null) {
+			// XOA ANH CU DI
+			String fileName = oldCategory.getIcon();
+			final String dir = "D:\\upload";
+			File file = new File(dir + "/category" + fileName);
+			if (file.exists()) {
+				file.delete();
+			}
+			oldCategory.setIcon(newCategory.getIcon());
+		}
+		categoryDao.edit(oldCategory);
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		categoryDao.delete(id);
+
+	}
+
+	@Override
+	public CategoryModel get(int id) {
+		// TODO Auto-generated method stub
+		return categoryDao.get(id);
+	}
+
+	@Override
+	public CategoryModel get(String name) {
+		// TODO Auto-generated method stub
+		return categoryDao.get(name);
+	}
+
+	@Override
+	public List<CategoryModel> getAll() {
+		// TODO Auto-generated method stub
+		return categoryDao.getAll();
+	}
+
+	@Override
+	public List<CategoryModel> search(String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

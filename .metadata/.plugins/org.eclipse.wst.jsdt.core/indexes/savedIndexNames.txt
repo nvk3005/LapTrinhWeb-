@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\K23_DaiHoc\HocKy1_Nam3\Workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+778209586.index
+2055351946.index
+4102502444.index
+4141333285.index
+1337211369.index
+352904565.index
+432808879.index
