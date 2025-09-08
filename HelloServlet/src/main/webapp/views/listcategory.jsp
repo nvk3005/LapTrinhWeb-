@@ -58,7 +58,7 @@
                                             <a href="<c:url value='/category/edit?id=${cate.cateid}'/>" class="btn btn-sm btn-warning">
                                                 <i class="bi bi-pencil-square"></i> Sửa
                                             </a>
-                                            <a href="<c:url value='/admin/category/delete?id=${cate.cateid}'/>" class="btn btn-sm btn-danger" 
+                                            <a href="<c:url value='/category/delete?id=${cate.cateid}'/>" class="btn btn-sm btn-danger" 
                                                onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?')">
                                                 <i class="bi bi-trash"></i> Xóa
                                             </a>
