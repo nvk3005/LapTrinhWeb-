@@ -25,14 +25,29 @@
 				</li>
 				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
 				</li>
+				<ul class="navbar-nav ml-auto">
+					<c:choose>
+						<c:when test="${empty sessionScope.account}">
+							<li class="nav-item"><a class="nav-link"
+								href="${pageContext.request.contextPath}/login">Đăng nhập</a></li>
+						</c:when>
+
+						<c:otherwise>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#" id="userDropdown"
+								role="button" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"> ${sessionScope.account.userName} </a>
+								<div class="dropdown-menu" aria-labelledby="userDropdown">
+									<a class="dropdown-item"
+										href="${pageContext.request.contextPath}/profile">Cập nhật
+										thông tin cá nhân</a> <a class="dropdown-item"
+										href="${pageContext.request.contextPath}/logout">Đăng xuất</a>
+								</div></li>
+						</c:otherwise>
+					</c:choose>
+
+				</ul>
 			</ul>
-
-			<!-- Nút đăng nhập -->
-			<form class="form-inline my-2 my-lg-0">
-				<a href="login.jsp" class="btn btn-primary my-2 my-sm-0">Đăng
-					nhập</a>
-			</form>
-
 
 			<form class="form-inline my-2 my-lg-0">
 				<div class="input-group input-group-sm">

@@ -22,4 +22,24 @@
     <servlet-name>HomeController</servlet-name>
     <url-pattern>/HomeController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>vn.iotstar.controller.web.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProfileController</display-name>
+    <servlet-name>ProfileController</servlet-name>
+    <servlet-class>vn.iotstar.controller.ProfileController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfileController</servlet-name>
+    <url-pattern>/ProfileController</url-pattern>
+  </servlet-mapping>
 </web-app>

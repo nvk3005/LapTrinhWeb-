@@ -51,11 +51,11 @@ public class DBConnect {
 			ResultSet rs = stmt.executeQuery();
 			// show data
 			while (rs.next()) {
-				System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
+			System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
 			}
 			stmt.close();
-			conn.close();
-		} catch (Exception e) {
+			conn.close(); 
+		}catch(Exception e) {
 			System.out.println(e);
 		}
 	}
