@@ -5,6 +5,7 @@ import vn.iotstar.model.UserModel;
 public interface UserDao {
 	public UserModel get(String username);
 	public void insert(UserModel user);
+	public boolean update(int id, String fullName, String phone, String avatar);
 	public boolean checkExistEmail(String email);
 	public boolean checkExistUsername(String userName);
 	public boolean checkExistPhone(String phone);

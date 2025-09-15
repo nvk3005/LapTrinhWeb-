@@ -15,6 +15,13 @@ public class UserServicesImpl implements UserServices{
 			return user;
 		return null;
 	}
+	
+	@Override
+	public boolean update(int id, String fullName, String phone, String avatar) {
+		// TODO Auto-generated method stub
+		return userDao.update(id, fullName, phone, avatar);
+	}
+	
 	@Override
 	public UserModel get(String username) {
 		return userDao.get(username);	

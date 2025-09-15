@@ -61,6 +61,25 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
+	public boolean update(int id, String fullName, String phone, String avatar) {
+		String sql = "UPDATE [Users] " + "SET fullname = ?, phone = ?, avatar = ? " + "WHERE id = ?";
+		try {
+			conn = new DBConnect().getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, fullName);
+			ps.setString(2, phone);
+			ps.setString(3, avatar);
+			ps.setInt(4, id);
+
+			ps.executeUpdate();
+			return true;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
 	public boolean checkExistEmail(String email) {
 		// TODO Auto-generated method stub
 		String sql = "Select * from [Users] where email = ?";
@@ -70,12 +89,12 @@ public class UserDaoImpl implements UserDao {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, email);
 			rs = ps.executeQuery();
-			if(rs.next())
+			if (rs.next())
 				duplicated = true;
 			ps.close();
 			conn.close();
-			
-		} catch (Exception ex) {	
+
+		} catch (Exception ex) {
 		}
 		return duplicated;
 	}
@@ -90,12 +109,12 @@ public class UserDaoImpl implements UserDao {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, phone);
 			rs = ps.executeQuery();
-			if(rs.next())
+			if (rs.next())
 				duplicated = true;
 			ps.close();
 			conn.close();
-			
-		} catch (Exception ex) {	
+
+		} catch (Exception ex) {
 		}
 		return duplicated;
 	}
@@ -110,16 +129,16 @@ public class UserDaoImpl implements UserDao {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, userName);
 			rs = ps.executeQuery();
-			if(rs.next())
+			if (rs.next())
 				duplicated = true;
 			ps.close();
 			conn.close();
-			
-		} catch (Exception ex) {	
+
+		} catch (Exception ex) {
 		}
 		return duplicated;
 	}
-	
+
 	@Override
 	public void resetPassword(String email, String password) {
 		// TODO Auto-generated method stub
@@ -131,7 +150,7 @@ public class UserDaoImpl implements UserDao {
 			ps.setString(2, email);
 			ps.execute();
 		} catch (Exception ex) {
-			
+
 		}
 	}
 }
