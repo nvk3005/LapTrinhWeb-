@@ -13,6 +13,7 @@ public class UserModel {
 	private int roleid;
 	private String phone;
 	private Date createdDate;
+
 	
 	public UserModel() {
 		super();
