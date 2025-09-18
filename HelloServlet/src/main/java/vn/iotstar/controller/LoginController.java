@@ -40,9 +40,7 @@ public class LoginController extends HttpServlet {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String remember = request.getParameter("remember");
 
-        boolean isRememberMe = "on".equals(remember);
 
         String alertMsg = "";
 
@@ -59,10 +57,6 @@ public class LoginController extends HttpServlet {
         if (user != null) {
             HttpSession session = request.getSession(true);
             session.setAttribute("account", user);
-
-            if (isRememberMe) {
-                saveRememberMe(response, username);
-            }
 
             response.sendRedirect(request.getContextPath() + "/home");
         } else {

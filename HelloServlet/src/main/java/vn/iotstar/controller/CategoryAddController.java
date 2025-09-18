@@ -86,8 +86,6 @@ public class CategoryAddController extends HttpServlet {
             }
             cateService.insert(category);
             response.sendRedirect(request.getContextPath() + "/category/list");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) { }
 	}
 }

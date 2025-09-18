@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,15 +15,25 @@ import lombok.NoArgsConstructor;
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long productId;
+
+    @Column(name="product_name", length = 500, columnDefinition = "nvarchar(500")
+    private String name;
+    @Column(nullable = false)
+    private int quantity;
+    @Column(nullable = false)
+    private double unitPrice;
+    @Column(length = 200)
+    private String images;
+    @Column(columnDefinition = "nvarchar(500) not null")
+    private String description;
+    private double discount;
+    @Temporal(TemporalType.DATE)
+    private Date createDate;
+    @Column(nullable = false)
+    private short status;
 
     @ManyToOne
-    @JoinColumn(name = "categoryId", nullable = false) // foreign key
+    @JoinColumn(name="categoryID")
     private CategoryEntity category;
-
-    @Column(name = "name", length = 200, columnDefinition = "NVARCHAR(200) NOT NULL")
-    private String name;
-
-    @Column(name = "image")
-    private String image;
 }

@@ -2,6 +2,7 @@ package vn.iotstar.model;
 
 import java.sql.Date;
 
+
 public class UserModel {
 	private int id;
 	private String email;

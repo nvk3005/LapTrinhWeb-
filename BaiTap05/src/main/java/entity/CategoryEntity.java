@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.Set;
+import java.util.HashSet;
+
 
 import java.io.Serializable;
 
@@ -23,6 +26,7 @@ public class CategoryEntity implements Serializable {
 
 	@Column(name = "categoryName", length=200, columnDefinition = "NVARCHAR(255) NOT NULL")
 	private String categoryName;
+
 
 	@OneToMany (mappedBy = "category", cascade = CascadeType.ALL)
     private Set<ProductEntity> products;
